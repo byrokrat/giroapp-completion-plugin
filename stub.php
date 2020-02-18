@@ -22,10 +22,14 @@ declare(strict_types = 1);
 
 namespace byrokrat\giroappcompletionplugin;
 
+use byrokrat\giroapp\Plugin\ApiVersionConstraint;
 use byrokrat\giroapp\Plugin\Plugin;
 
 require 'phar://' . __FILE__ . '/vendor/autoload.php';
 
-return new Plugin(new CompleteConsole);
+return new Plugin(
+    new ApiVersionConstraint('giroapp-completion-plugin', '1.*'),
+    new CompleteConsole
+);
 
 __HALT_COMPILER();
