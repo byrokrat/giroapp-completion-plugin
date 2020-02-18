@@ -13,4 +13,4 @@ install:
     - make tools/box tools/giroapp PHIVE_CMD="php phive.phar"
 
 script:
-    - make test
+    - make test PHIVE_CMD="php phive.phar"
