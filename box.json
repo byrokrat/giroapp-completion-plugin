@@ -1,0 +1,15 @@
+{
+    "output": "giroapp-completion-plugin.phar",
+    "directories": [
+        "src",
+        "vendor"
+    ],
+    "compactors": [
+        "KevinGH\\Box\\Compactor\\Php"
+    ],
+    "stub": "stub.php",
+    "main": false,
+    "check-requirements": false,
+    "algorithm": "SHA512",
+    "chmod": "0660"
+}

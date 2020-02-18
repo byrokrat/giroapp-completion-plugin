@@ -1,0 +1,28 @@
+{
+    "name": "byrokrat/giroappcompletionplugin",
+    "description": "Giroapp shell completion plugin",
+    "keywords": ["giroapp"],
+    "homepage": "https://github.com/byrokrat/giroapp-completion-plugin",
+    "type": "project",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Hannes Forsgård",
+            "email": "hannes.forsgard@fripost.org"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "byrokrat\\giroappcompletionplugin\\": ["src/"]
+        }
+    },
+    "config": {
+        "platform": {
+            "php": "7.2.9"
+        }
+    },
+    "require": {
+        "php": ">=7.2.9",
+        "hanneskod/comphlete": "^1@beta"
+    }
+}

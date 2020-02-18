@@ -1,0 +1,74 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "16b321f0d1d2931f9b71e0b33c58c163",
+    "packages": [
+        {
+            "name": "hanneskod/comphlete",
+            "version": "1.0.0-beta6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hanneskod/comphlete.git",
+                "reference": "dcbc8825b2bd2b45eeef4c1ddaae381567531efb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hanneskod/comphlete/zipball/dcbc8825b2bd2b45eeef4c1ddaae381567531efb",
+                "reference": "dcbc8825b2bd2b45eeef4c1ddaae381567531efb",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7"
+            },
+            "require-dev": {
+                "symfony/console": "^3.2|^4|^5"
+            },
+            "suggest": {
+                "symfony/console": "Generates completions for symfony apps with no hassle"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "hanneskod\\comphlete\\": [
+                        "src/"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Unlicense"
+            ],
+            "authors": [
+                {
+                    "name": "Hannes Forsgård",
+                    "email": "hannes.forsgard@fripost.org"
+                }
+            ],
+            "description": "Dynamic bash completion from PHP",
+            "homepage": "https://github.com/hanneskod/comphlete",
+            "keywords": [
+                "autocomplete",
+                "complete"
+            ],
+            "time": "2020-02-18T11:49:54+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "hanneskod/comphlete": 10
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=7.2.9"
+    },
+    "platform-dev": [],
+    "platform-overrides": {
+        "php": "7.2.9"
+    }
+}
