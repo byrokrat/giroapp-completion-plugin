@@ -18,13 +18,13 @@ all: test
 build: $(TARGET)
 
 .PHONY: test
-test: install_test giroapp.ini $(GIROAPP_CMD)
+test: setup_test_env $(GIROAPP_CMD)
 	@echo Testing completion output using "_complete 'giroapp tran' 11"
 	test "$(shell export GIROAPP_INI=giroapp.ini; $(GIROAPP_CMD) _complete 'giroapp tran' 11 | xargs)" = "transactions"
 	@echo OK
 
-.PHONY: install_test
-install_test: $(TARGET) giroapp.ini $(GIROAPP_CMD)
+.PHONY: setup_test_env
+setup_test_env: $(TARGET) giroapp.ini
 	cp $< $(shell export GIROAPP_INI=giroapp.ini; $(GIROAPP_CMD) conf plugins_dir)
 
 giroapp.ini: $(GIROAPP_CMD)
