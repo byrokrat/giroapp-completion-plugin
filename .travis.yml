@@ -9,8 +9,8 @@ php:
 
 install:
     - make vendor/installed
-    - wget -O phive.phar https://phar.io/releases/phive.phar
-    - make tools/box tools/giroapp PHIVE_CMD="php phive.phar"
+    - travis_retry wget -O phive.phar https://phar.io/releases/phive.phar
+    - travis_retry make tools/box tools/giroapp PHIVE_CMD="php phive.phar"
 
 script:
     - make test PHIVE_CMD="php phive.phar"
