@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "16b321f0d1d2931f9b71e0b33c58c163",
+    "content-hash": "37ef60d7e9e8b40e67a45faae860b275",
     "packages": [
         {
             "name": "hanneskod/comphlete",
@@ -53,6 +53,10 @@
                 "autocomplete",
                 "complete"
             ],
+            "support": {
+                "issues": "https://github.com/hanneskod/comphlete/issues",
+                "source": "https://github.com/hanneskod/comphlete/tree/master"
+            },
             "time": "2020-02-18T11:49:54+00:00"
         }
     ],
@@ -65,10 +69,11 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.2.9"
+        "php": "^7.4 || ^8.0"
     },
     "platform-dev": [],
     "platform-overrides": {
-        "php": "7.2.9"
-    }
+        "php": "7.4.0"
+    },
+    "plugin-api-version": "2.0.0"
 }
