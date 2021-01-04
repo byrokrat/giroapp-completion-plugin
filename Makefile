@@ -19,8 +19,8 @@ build: $(TARGET)
 
 .PHONY: test
 test: setup_test_env $(GIROAPP_CMD)
-	@echo Testing completion output using "_complete 'giroapp tran' 11"
-	test "$(shell export GIROAPP_INI=giroapp.ini; $(GIROAPP_CMD) _complete 'giroapp tran' 11 | xargs)" = "transactions"
+	@echo Testing completion output using "_complete 'giroapp stat' 11"
+	test "$(shell export GIROAPP_INI=giroapp.ini; $(GIROAPP_CMD) _complete 'giroapp stat' 11 | xargs)" = "status"
 	@echo OK
 
 .PHONY: setup_test_env
@@ -41,7 +41,6 @@ clean:
 	rm -rf vendor
 	rm -f $(TARGET)
 	rm -f giroapp.ini
-	rm -f phive.xml
 
 .PHONY: install
 install: $(TARGET) test $(GIROAPP_CMD)
@@ -58,8 +57,9 @@ vendor/installed: composer.lock
 	$(COMPOSER_CMD) install
 	touch $@
 
-$(BOX_CMD):
-	$(PHIVE_CMD) install humbug/box:3 --force-accept-unsigned
+tools/installed:
+	$(PHIVE_CMD) install --force-accept-unsigned
+	touch $@
 
-$(GIROAPP_CMD):
-	$(PHIVE_CMD) install byrokrat/giroapp:1 --force-accept-unsigned
+$(BOX_CMD): tools/installed
+$(GIROAPP_CMD): tools/installed

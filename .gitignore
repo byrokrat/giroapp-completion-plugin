@@ -4,4 +4,4 @@
 /composer.phar
 /giroapp-completion-plugin.phar
 /giroapp.ini
-/phive.xml
+/*.local.*
