@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU General Public License
  * along with giroapp-completion-plugin. If not, see <http://www.gnu.org/licenses/>.
  *
- * Copyright 2020 Hannes Forsgård
+ * Copyright 2020-21 Hannes Forsgård
  */
 
 declare(strict_types = 1);
