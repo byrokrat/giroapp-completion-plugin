@@ -3,6 +3,8 @@ PHIVE_CMD=phive
 GIROAPP_CMD=tools/giroapp
 BOX_CMD=tools/box
 
+GIROAPP_INSTALLED:=$(shell command -v giroapp 2> /dev/null)
+
 .DEFAULT_GOAL=all
 
 TARGET=giroapp-completion-plugin.phar
@@ -43,12 +45,18 @@ clean:
 	rm -f giroapp.ini
 
 .PHONY: install
-install: $(TARGET) test $(GIROAPP_CMD)
-	cp $< $(shell $(GIROAPP_CMD) conf plugins_dir)
+install: $(TARGET) test
+ifndef GIROAPP_INSTALLED
+    $(error "giroapp is not available, please install to continue")
+endif
+	cp $< $(shell giroapp conf plugins_dir)
 
-.PHONY: uninstall $(GIROAPP_CMD)
+.PHONY: uninstall
 uninstall:
-	rm -f $(shell $(GIROAPP_CMD) conf plugins_dir)/$(TARGET)
+ifndef GIROAPP_INSTALLED
+    $(error "giroapp is not available, please install to continue")
+endif
+	rm -f $(shell giroapp conf plugins_dir)/$(TARGET)
 
 composer.lock: composer.json
 	@echo composer.lock is not up to date
