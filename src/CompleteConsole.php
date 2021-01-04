@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of giroapp-completion-plugin.
  *
@@ -18,7 +19,7 @@
  * Copyright 2020-21 Hannes Forsgård
  */
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace byrokrat\giroappcompletionplugin;
 
@@ -53,7 +54,7 @@ final class CompleteConsole implements ConsoleInterface
 
     public function execute(InputInterface $input, OutputInterface $output): void
     {
-        $comphlete = new ExecutableComphleteCommand;
+        $comphlete = new ExecutableComphleteCommand();
         $comphlete->setApplication($this->command->getApplication());
         $comphlete->execute($input, $output);
     }

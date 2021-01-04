@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of giroapp-completion-plugin.
  *
@@ -18,7 +19,7 @@
  * Copyright 2020-21 Hannes Forsgård
  */
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace byrokrat\giroappcompletionplugin;
 
@@ -29,7 +30,7 @@ require 'phar://' . __FILE__ . '/vendor/autoload.php';
 
 return new Plugin(
     new ApiVersionConstraint('giroapp-completion-plugin', '1.*'),
-    new CompleteConsole
+    new CompleteConsole()
 );
 
 __HALT_COMPILER();
